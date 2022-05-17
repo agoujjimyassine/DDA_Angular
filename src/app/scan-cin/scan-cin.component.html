@@ -1,0 +1,23 @@
+<div class="container mt-4">
+
+    <div class="row mt-4" style="font-family: serif;">
+        <h4>{{nom_type_Demande}}</h4>
+        <h2 *ngIf="second_scan">Scanner l'autre face de la CIN</h2>
+    </div>
+
+    <div class="row mt-4">
+
+        <div class="col-sm-6" style="margin: 0 auto">
+            <a class="card mt-9 mb-9" (click)="scanCin()" style="text-decoration:none; color:black; background-color: #8FBC8F">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center; font-family: serif;">Scanner Votre CIN</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <a href="#" class="btn btn-warning">Précédent</a>
+    </div>
+
+</div>
