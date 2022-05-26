@@ -12,11 +12,18 @@ import { ScanCinComponent } from './scan-cin/scan-cin.component';
 import { ServiceScanCin } from 'src/service/service.scanCin';
 import { ServiceCitoyen } from 'src/service/service.citoyen';
 import { FormCitoyenComponent } from './form-citoyen/form-citoyen.component';
+import { DatePipe } from '@angular/common';
+import { FindCitoyenByCinComponent } from './find-citoyen-by-cin/find-citoyen-by-cin.component';
+import { FinalCitoyenComponent } from './final-citoyen/final-citoyen.component';
+import { PieceCitoyenComponent } from './piece-citoyen/piece-citoyen.component';
 
 const appRoutes: Routes = [
   { path: 'typesDemandes', component: TypesDemandesComponent },
   { path: 'scanCin', component: ScanCinComponent },
-  { path: 'formCitoyen', component: FormCitoyenComponent }
+  { path: 'formCitoyen', component: FormCitoyenComponent },
+  { path: 'findCitoyenByCin', component: FindCitoyenByCinComponent },
+  { path: 'pieceCitoyen', component: PieceCitoyenComponent },
+  { path: 'finalCitoyen', component: FinalCitoyenComponent }
 ];
 
 @NgModule({
@@ -24,7 +31,10 @@ const appRoutes: Routes = [
     AppComponent,
     TypesDemandesComponent,
     ScanCinComponent,
-    FormCitoyenComponent
+    FormCitoyenComponent,
+    FindCitoyenByCinComponent,
+    FinalCitoyenComponent,
+    PieceCitoyenComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +47,8 @@ const appRoutes: Routes = [
   providers: [
     ServiceTypeDemande,
     ServiceCitoyen,
-    ServiceScanCin
+    ServiceScanCin,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

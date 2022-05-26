@@ -7,60 +7,59 @@
     <div class="row mt-4">
         <p style="text-align: center">المرجو التاكد من صحة هذه المعلومات</p>
         <p style="text-align: center">Merci de vérifier si ces informations sont bien correctes</p>
+        <p></p>
     </div>
 
     <div class="row mt-6">
 
-        <div class="col-6">
-
             <div class="row mt-6">
                 <div class="col-6">
                   <label class="form-label">Nom</label>
-                  <input type="text" class="form-control" name="nom" placeholder="Nom" value="">
+                  <input type="text" class="form-control" name="nom" placeholder="Nom" [(ngModel)]="citoyenFinal.nom">
                 </div>
                 <div class="col-6">
                   <label class="form-label">Prénom</label>
-                  <input type="text" class="form-control" name="prenom" placeholder="Prénom" value="">
+                  <input type="text" class="form-control" name="prenom" placeholder="Prénom" [(ngModel)]="citoyenFinal.prenom">
                 </div>
             </div>
 
             <div class="row mt-6">
                 <div class="col-6">
                   <label class="form-label">Lieu de naissance</label>
-                  <input type="text" class="form-control" name="lieu_naissance" placeholder="Lieu de naissance" value="">
+                  <input type="text" class="form-control" name="lieu_naissance" placeholder="Lieu de naissance" [(ngModel)]="citoyenFinal.lieu_naissance">
                 </div>
                 <div class="col-6">
                   <label class="form-label">Date de naissance</label>
-                  <input type="date" class="form-control" name="date_naissance" placeholder="Date de naissance" value="">
+                  <input type="date" class="form-control" name="date_naissance" placeholder="Date de naissance">
                 </div>
             </div>
 
             <div class="row mt-6">
                 <div class="col-6">
                   <label class="form-label">Pére</label>
-                  <input type="text" class="form-control" name="prenom_pere" placeholder="Pére" value="">
+                  <input type="text" class="form-control" name="prenom_pere" placeholder="Pére" [(ngModel)]="citoyenFinal.prenom_pere">
                 </div>
                 <div class="col-6">
                   <label class="form-label">Mére</label>
-                  <input type="text" class="form-control" name="prenom_mere" placeholder="Mére" value="">
+                  <input type="text" class="form-control" name="prenom_mere" placeholder="Mére" [(ngModel)]="citoyenFinal.prenom_mere">
                 </div>
             </div>
       
             <div class="row mt-6">
                 <div class="col-6">
                   <label class="form-label">Adresse</label>
-                  <input type="text" class="form-control" name="adresse" placeholder="Adresse" value="">
+                  <input type="text" class="form-control" name="adresse" placeholder="Adresse" [(ngModel)]="citoyenFinal.adresse">
                 </div>
                 <div class="col-6">
                   <label class="form-label">Numéro de l'état civil</label>
-                  <input type="text" class="form-control" name="n_etat_civil" placeholder="Numéro de l'état civil" value="">
+                  <input type="text" class="form-control" name="n_etat_civil" placeholder="Numéro de l'état civil" [(ngModel)]="citoyenFinal.n_etat_civil">
                 </div>
             </div>
 
             <div class="row mt-6">
                 <div class="col-6">
                   <label class="form-label">Numéro de la CIN</label>
-                  <input type="text" class="form-control" name="cin" placeholder="Numéro de la CIN" value="">
+                  <input type="text" class="form-control" name="cin" placeholder="Numéro de la CIN" [(ngModel)]="citoyenFinal.cin">
                 </div>
                 <div class="col-6">
                   <label class="form-label">Téléphone</label>
@@ -86,29 +85,11 @@
                 </div>
             </div>
 
-        </div>
-
-        <div class="col-6">
-
-            <div>
-                <img src="">
-            </div>
-      
-            <div>
-                <img src="">
-            </div>
-
-        </div>
-
     </div>
 
-    <div class="mt-5">
-        <div class="col-6">
-            <a href="" class="btn btn-warning">Précédent</a>
-        </div>
-        <div class="col-6">
-            
-        </div>
-    </div>
+      <div class="mt-5">
+        <a href="scanCin" class="btn btn-warning">Précédent</a>
+        <a (click)="saveOrUpdateCitoyen()" class="btn btn-primary">Suivant</a>
+      </div>
 
 </div>

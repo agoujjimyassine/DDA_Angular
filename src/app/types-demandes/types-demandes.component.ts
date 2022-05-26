@@ -12,8 +12,8 @@ export class TypesDemandesComponent implements OnInit {
 
   pageTypesDemandes: any;
 
-  constructor(private typeDemandeService: ServiceTypeDemande, private router: Router) { }
-
+  constructor(private typeDemandeService: ServiceTypeDemande, private router: Router) {}
+ 
   ngOnInit() {
     this.typeDemandeService.getTypesDemandes()
       .subscribe(data => {

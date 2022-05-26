@@ -1,0 +1,15 @@
+<div class="container mt-4">
+            
+    <div class="row mt-4" style="font-family: serif;">
+        <h4>{{nom_type_Demande}}</h4>
+    </div>
+
+        <label class="form-label">Numéro CIN</label>
+        <input type="text" class="form-control" name="numerocin" placeholder="Numéro CIN" [(ngModel)]="cin">
+
+    <div class="mt-5">
+        <a href="scanCin" class="btn btn-warning">Précédent</a>
+        <a (click)="findCitoyenByCin()" class="btn btn-primary">Suivant</a>
+      </div>
+    
+</div>

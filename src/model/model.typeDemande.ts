@@ -1,4 +1,4 @@
-export class TypeDemande {
+/*export class TypeDemande {
 
   constructor(
 
@@ -6,5 +6,13 @@ export class TypeDemande {
       public name: string
       
       ) { }
+
+}*/
+
+
+export class TypeDemande {
+
+  id: number;
+  name: '';
 
 }
