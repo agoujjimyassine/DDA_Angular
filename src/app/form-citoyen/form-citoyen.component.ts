@@ -17,6 +17,8 @@ export class FormCitoyenComponent implements OnInit {
 
   citoyen : Citoyen = null;
 
+  citoyenFromDb = false;
+
   citoyenFinal;
 
   constructor(public datepipe: DatePipe, private citoyenService: ServiceCitoyen, private router: Router) { }
@@ -26,6 +28,7 @@ export class FormCitoyenComponent implements OnInit {
     this.citoyen = JSON.parse(localStorage.getItem('citoyen'));
     if(this.citoyen){
       this.citoyenFinal = this.citoyen;
+      this.citoyenFromDb = true;
     } else {
       this.citoyenFinal = this.citoyenNoDB;
     }
@@ -34,6 +37,7 @@ export class FormCitoyenComponent implements OnInit {
     this.citoyenService.getCitoyenByCin(localStorage.getItem('find_citoyen_by_cin'))
     .subscribe(data => {
       this.citoyenFinal = data;
+      this.citoyenFromDb = true;
     });
     localStorage.removeItem('find_citoyen_by_cin');
   }
@@ -41,8 +45,23 @@ export class FormCitoyenComponent implements OnInit {
   }
 
   saveOrUpdateCitoyen(){
-    console.log("Save Or Update Citoyen");
+
+    if(this.citoyenFromDb){
+
+      this.citoyenService.updateCitoyen(this.citoyenFinal)
+    .subscribe(data => {
+    });
+
+    } else {
+      
+      this.citoyenService.saveCitoyen(this.citoyenFinal)
+    .subscribe(data => {
+    });
+
+    }
+
     this.router.navigate(['pieceCitoyen']);
+
   }
 
 }

@@ -16,6 +16,8 @@ import { DatePipe } from '@angular/common';
 import { FindCitoyenByCinComponent } from './find-citoyen-by-cin/find-citoyen-by-cin.component';
 import { FinalCitoyenComponent } from './final-citoyen/final-citoyen.component';
 import { PieceCitoyenComponent } from './piece-citoyen/piece-citoyen.component';
+import { TypesDemandesResponsableComponent } from './types-demandes-responsable/types-demandes-responsable.component';
+import { ListeDemandesComponent } from './liste-demandes/liste-demandes.component';
 
 const appRoutes: Routes = [
   { path: 'typesDemandes', component: TypesDemandesComponent },
@@ -23,7 +25,9 @@ const appRoutes: Routes = [
   { path: 'formCitoyen', component: FormCitoyenComponent },
   { path: 'findCitoyenByCin', component: FindCitoyenByCinComponent },
   { path: 'pieceCitoyen', component: PieceCitoyenComponent },
-  { path: 'finalCitoyen', component: FinalCitoyenComponent }
+  { path: 'finalCitoyen', component: FinalCitoyenComponent },
+  { path: 'typesDemandesResponsable', component: TypesDemandesResponsableComponent },
+  { path: 'listeDemandes', component: ListeDemandesComponent }
 ];
 
 @NgModule({
@@ -34,7 +38,9 @@ const appRoutes: Routes = [
     FormCitoyenComponent,
     FindCitoyenByCinComponent,
     FinalCitoyenComponent,
-    PieceCitoyenComponent
+    PieceCitoyenComponent,
+    TypesDemandesResponsableComponent,
+    ListeDemandesComponent
   ],
   imports: [
     BrowserModule,

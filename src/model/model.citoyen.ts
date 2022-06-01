@@ -18,7 +18,7 @@ export class Citoyen {
     prenom_mere_arabe: '';
     lieu_naissance_arabe: '';
     email: '';
-    tele: number;
+    tele: '';
     //date_naissance: '';
   
   }

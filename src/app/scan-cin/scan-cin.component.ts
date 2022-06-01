@@ -16,7 +16,7 @@ export class ScanCinComponent implements OnInit {
   citoyen = null;
   citoyenNoDB = null;
   results = [
-    {'result_1': 'front', 'result_2': 'AOUINA', 'result_3': '', 'result_4': 'EA237044', 'result_5': '', 'result_6': '01/11/2001',
+    {'result_1': 'front', 'result_2': 'AOUINA', 'result_3': '', 'result_4': 'f', 'result_5': '', 'result_6': '01/11/2001',
                'result_7': 'Image_Scan_Final/front20220523100150625186.jpg'},
     {'result_1': 'back', 'result_2': 'RACHID ben HOMMAD', 'result_3': 'SOUAD bent MBAREK', 'result_4': '4195/2001',
                'result_5': 'HAY LR NR 102 BEN GUERIR', 'result_6': '', 'result_7': 'Image_Scan_Final/back20220523100010333453.jpg'}
