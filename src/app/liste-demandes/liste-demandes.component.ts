@@ -15,8 +15,8 @@ export class ListeDemandesComponent implements OnInit {
   constructor(private demandeService: ServiceDemande) { }
 
   ngOnInit(): void {
-    console.log({"id": Number(localStorage.getItem('id_type_Demande'))});
-    this.demandeService.getDemandesByTypeDemandeId({"id": 4})
+    //console.log({"id": Number(localStorage.getItem('id_type_Demande'))});
+    this.demandeService.getDemandesByTypeDemandeId()
       .subscribe(data => {
         this.pageDemandes = data;
         console.log('Liste Demandes',this.pageDemandes);

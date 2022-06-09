@@ -7,10 +7,16 @@ export class ServiceDemande {
 
   constructor(private http: HttpClient) {}
 
-  getDemandesByTypeDemandeId(object: any) {
+  /*getDemandesByTypeDemandeId(object: any) {
     return this.http.get('http://localhost:3000/api/demandes', object).pipe(
       map(resp => resp)
   );
+}*/
+
+getDemandesByTypeDemandeId() {
+  return this.http.get('http://localhost:3000/api/demandes').pipe(
+    map(resp => resp)
+);
 }
 
 }

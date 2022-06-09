@@ -24,6 +24,10 @@ export class TypesDemandesComponent implements OnInit {
   toScanCin(typeDemande: TypeDemande) {
     localStorage.removeItem('nom_type_Demande');
     localStorage.setItem('nom_type_Demande', typeDemande.name);
+
+    localStorage.removeItem('id_type_Demande');
+    localStorage.setItem('id_type_Demande', typeDemande.id.toString());
+
     this.router.navigate(['scanCin']);
   }
 

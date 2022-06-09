@@ -19,6 +19,7 @@ import { PieceCitoyenComponent } from './piece-citoyen/piece-citoyen.component';
 import { TypesDemandesResponsableComponent } from './types-demandes-responsable/types-demandes-responsable.component';
 import { ListeDemandesComponent } from './liste-demandes/liste-demandes.component';
 import { ServiceDemande } from 'src/service/service.demande';
+import { ServicePieceJointe } from 'src/service/service.pieceJointe';
 
 const appRoutes: Routes = [
   { path: 'typesDemandes', component: TypesDemandesComponent },
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     ServiceTypeDemande,
+    ServicePieceJointe,
     ServiceCitoyen,
     ServiceScanCin,
     ServiceDemande,
