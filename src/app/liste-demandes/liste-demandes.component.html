@@ -1,1 +1,34 @@
 
+        <div class="container mt-4">
+
+            <div class="row mt-4" style="font-family: serif;">
+                <h4>{{nom_type_Demande}}</h4>
+            </div>
+
+            <div class="row mt-4">
+
+                <table>
+                    <tr>
+                        <th>Etat de demande</th>
+                        <th>Type de demande</th>
+                        <th>Date de création</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+
+                    <tr *ngFor="let demande of pageDemandes">
+                        <td *ngIf="demande?.etat_demandes">{{demande.etat_demandes.name}}</td>
+                        <td *ngIf="demande?.type_demandes">{{demande.type_demandes.name}}</td>
+                        <td>{{demande.created_at | date: 'dd/MM/yyyy'}}</td>
+
+                        <td><a (click)="addPiece(demande)" class="btn btn-success">Ajouter des piéces</a></td>
+                    
+                        <td *ngIf="demande?.etat_demandes.id === 3"><a href="" class="btn btn-primary">Télécharger la demande</a></td>
+                    
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>

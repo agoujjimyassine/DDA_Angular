@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Demande } from 'src/model/model.demande';
 import { ServiceDemande } from 'src/service/service.demande';
 
 @Component({
@@ -12,15 +14,19 @@ export class ListeDemandesComponent implements OnInit {
 
   pageDemandes: any;
 
-  constructor(private demandeService: ServiceDemande) { }
+  constructor(private demandeService: ServiceDemande, private router: Router) { }
 
   ngOnInit(): void {
-    //console.log({"id": Number(localStorage.getItem('id_type_Demande'))});
-    this.demandeService.getDemandesByTypeDemandeId()
+    this.demandeService.getDemandesByTypeDemandeId(localStorage.getItem('id_type_Demande'))
       .subscribe(data => {
         this.pageDemandes = data;
-        console.log('Liste Demandes',this.pageDemandes);
       });
+  }
+
+  addPiece(demande: Demande){
+    localStorage.removeItem('demande');
+    localStorage.setItem('demande', JSON.stringify(demande));
+    this.router.navigate(['addPiece']);
   }
 
 }

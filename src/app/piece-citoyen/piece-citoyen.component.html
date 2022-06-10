@@ -11,7 +11,7 @@
 
     <div class="row mt-4">
     <ul class="list-group">
-        <li class="list-group-item">فاتورة الماء والكهرباء او وصل الإيجار</li>
+        <li *ngFor="let pieceJointe of pagePiecesJointes" class="list-group-item">{{pieceJointe.nom}}</li>
     </ul>
     </div>
 

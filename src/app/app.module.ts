@@ -20,6 +20,7 @@ import { TypesDemandesResponsableComponent } from './types-demandes-responsable/
 import { ListeDemandesComponent } from './liste-demandes/liste-demandes.component';
 import { ServiceDemande } from 'src/service/service.demande';
 import { ServicePieceJointe } from 'src/service/service.pieceJointe';
+import { AddPieceComponent } from './add-piece/add-piece.component';
 
 const appRoutes: Routes = [
   { path: 'typesDemandes', component: TypesDemandesComponent },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
   { path: 'pieceCitoyen', component: PieceCitoyenComponent },
   { path: 'finalCitoyen', component: FinalCitoyenComponent },
   { path: 'typesDemandesResponsable', component: TypesDemandesResponsableComponent },
-  { path: 'listeDemandes', component: ListeDemandesComponent }
+  { path: 'listeDemandes', component: ListeDemandesComponent },
+  { path: 'addPiece', component: AddPieceComponent }
 ];
 
 @NgModule({
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     FinalCitoyenComponent,
     PieceCitoyenComponent,
     TypesDemandesResponsableComponent,
-    ListeDemandesComponent
+    ListeDemandesComponent,
+    AddPieceComponent
   ],
   imports: [
     BrowserModule,

@@ -16,11 +16,9 @@ export class PieceCitoyenComponent implements OnInit {
   constructor(private pieceJointeService: ServicePieceJointe) { }
 
   ngOnInit(): void {
-    console.log({"id": Number(localStorage.getItem('id_type_Demande'))});
-    this.pieceJointeService.getPiecesJointesByTypeDemandeId({"id": 1})
+    this.pieceJointeService.getPiecesJointesByTypeDemandeId(localStorage.getItem('id_type_Demande'))
       .subscribe(data => {
         this.pagePiecesJointes = data;
-        console.log('Liste Pieces Jointes',this.pagePiecesJointes);
       });
   }
 
