@@ -21,6 +21,7 @@ import { ListeDemandesComponent } from './liste-demandes/liste-demandes.componen
 import { ServiceDemande } from 'src/service/service.demande';
 import { ServicePieceJointe } from 'src/service/service.pieceJointe';
 import { AddPieceComponent } from './add-piece/add-piece.component';
+import { CreatePdfComponent } from './create-pdf/create-pdf.component';
 
 const appRoutes: Routes = [
   { path: 'typesDemandes', component: TypesDemandesComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
   { path: 'finalCitoyen', component: FinalCitoyenComponent },
   { path: 'typesDemandesResponsable', component: TypesDemandesResponsableComponent },
   { path: 'listeDemandes', component: ListeDemandesComponent },
-  { path: 'addPiece', component: AddPieceComponent }
+  { path: 'addPiece', component: AddPieceComponent },
+  { path: 'createPdf', component: CreatePdfComponent }
 ];
 
 @NgModule({
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     PieceCitoyenComponent,
     TypesDemandesResponsableComponent,
     ListeDemandesComponent,
-    AddPieceComponent
+    AddPieceComponent,
+    CreatePdfComponent
   ],
   imports: [
     BrowserModule,

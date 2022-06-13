@@ -29,4 +29,10 @@ export class ListeDemandesComponent implements OnInit {
     this.router.navigate(['addPiece']);
   }
 
+  createPdf(demande: Demande){
+    localStorage.removeItem('demande');
+    localStorage.setItem('demande', JSON.stringify(demande));
+    this.router.navigate(['createPdf']);
+  }
+
 }

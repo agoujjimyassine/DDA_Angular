@@ -23,7 +23,7 @@
 
                         <td><a (click)="addPiece(demande)" class="btn btn-success">Ajouter des piéces</a></td>
                     
-                        <td *ngIf="demande?.etat_demandes.id === 3"><a href="" class="btn btn-primary">Télécharger la demande</a></td>
+                        <td *ngIf="demande?.etat_demandes.id === 3"><a (click)="createPdf(demande)" class="btn btn-primary">Télécharger la demande</a></td>
                     
                     </tr>
 
